@@ -14,7 +14,7 @@ assembly / assemblyMergeStrategy := {
     MergeStrategy.concat
   case x =>
     // For all the other files, use the default sbt-assembly merge strategy
-    val oldStrategy = (assembly / assemblyMergeStrategy).value
-    oldStrategy(x)
+    val defaultStrategy = (assembly / assemblyMergeStrategy).value
+    defaultStrategy(x)
 }
 //#assembly
